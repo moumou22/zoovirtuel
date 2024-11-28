@@ -1,0 +1,16 @@
+CREATE DATABASE zoo_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE zoo_db;
+CREATE TABLE animals (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(100) NOT NULL,
+    espece VARCHAR(255) DEFAULT NULL,
+    age INT(11) DEFAULT NULL,
+    statut VARCHAR(50) NOT NULL,
+    photo_url TEXT DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO animals (nom, espece, age, statut, photo_url) VALUES
+('gharbiiiinho', 'lion', 22, 'En danger', 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Lion_d%27Afrique.jpg'),
+('Dumbodazda', 'Éléphantdada', 12, 'Réhabilitation', 'https://cdn.britannica.com/02/152302-050-1A984FCB/African-savanna-elephant.jpga'),
+('kiki', 'katous', 3, 'tres tres bien', 'https://userway.org/fr/wp-content/uploads/2023/12/Chaton-blanc-avec-des-yeux-noirs-montrant-sa-patte-1024x683.jpg'),
+('nakar', 'Perroquet', 2, 'Actif', 'https://www.parrotworld.fr/sites/default/files/styles/famille_animaux_header/public/media/image/Perroquet_Ara_Macao_157318289_gi_A.jpg?itok=DjIutVPF');
+SELECT * FROM animals;
